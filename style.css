@@ -1,0 +1,51 @@
+body
+{
+  color: white;
+  background: #c0d3ff;
+  text-align: center;
+}
+span
+{
+  font-size: 30px;
+}
+#camera , #result
+{
+  border: 2px dashed black;
+
+  width: 350px;
+  margin-left: 10%;
+  height: 300px; 
+}
+#result_hand_name ,#result_hand_name2  
+{
+  color: black;
+}
+.emotion_name
+{
+  font-size: 40px;
+}
+.emoji
+{
+  font-size:48px;
+}
+
+#camerastore{
+    border: 2px dashed black;
+
+  width: 350px;
+  margin-left: 60%;
+  height: 300px; 
+  margin-bottom: 30px;
+}
+
+
+#holder{
+    height: 300px;
+}
+
+/* .btn,col{
+    margin-top: 300px;
+} */
+.p{
+  color: black;
+}

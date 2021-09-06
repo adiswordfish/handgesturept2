@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Capture picture from your webcam</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span>&#9996;</span>
+        <span>&#128076;</span>
+        <span>&#128077;</span>
+        <p style="font-size: 22px;">Take your selfie to generate hand
+            <br>
+          <b style="color: yellow">Are you with Peace?</b>
+          <br>
+          <b style="color: black">Are you showing Good?</b>
+          <br>
+          <b style="color: red">Are you showing Amazing?</b>
+          <br>
+        </p>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label class="p">Webcam View - </label>
+            <div id="camera"></div>
+                <label class="p">Snapshot - </label>
+                <div id="result"></div>
+                <br><br>
+                <button onclick="take_snapshot();" class="btn btn-warning">Capture Image</button>
+            </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12 col">
+            <label class="p">Prediction 1 - </label>
+            <p class="hand_name" id="result_hand_name"></p>
+            <p class="hand" id="update_hand"></p>
+  
+            <label class="p">Prediction 2 - </label>
+            <p class="hand_name" id="result_hand_name2"></p>
+            <p class="hand2" id="update_hand2"></p>
+          </div>
+</body>
+
+<script>
+    // CAMERA SETTINGS.
+    Webcam.set({
+        width: 350,
+        height: 300,
+        image_format: 'png',
+        png_quality: 100
+    });
+    Webcam.attach('#camera');
+
+    // SHOW THE SNAPSHOT.
+    // takeSnapShot = function () {
+    //     Webcam.snap(function (data_uri) {
+    //         document.getElementById('snapShot').innerHTML = 
+    //             '<img src="' + data_uri + '" width="70px" height="50px" />';
+    //     });
+    // }
+
+    function take_snapshot(){
+        Webcam.snap(function (data_uri) {
+            document.getElementById('result').innerHTML = 
+                '<img src="' + data_uri + '" width="350px" height="300px" />';
+        });
+    }
+</script>
+</html>
